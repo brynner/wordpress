@@ -1,0 +1,132 @@
+
+
+header.banner {
+	position:relative;
+	height:78px;
+}
+
+header.banner nav li:last-child a {
+	padding:5px 10px;
+	color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight:700;
+    text-decoration:none;
+}
+header.banner nav li:last-child a:hover {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+}
+
+// Brand
+
+header .brand, 
+header .brand:hover {
+	float:left;
+	margin:10px 10px 0px 20px;
+	font-weight:700;
+	font-size:40px;
+	text-transform:uppercase;
+	text-decoration:none;
+	color:$color-secondary;
+}
+
+// Menu
+
+header .nav-primary {
+	position:absolute;
+	top:35px;
+	right:0px;
+}
+header .nav-primary li {
+	margin:0px 25px;
+}
+header .nav-primary li a {
+	color:$color-text;
+	text-decoration:none;
+}
+header .nav-primary li a:hover {
+	color:$color-primary-hover;
+}
+
+header .sub-menu {
+	display:none;
+}
+
+
+// Menu Collapse
+
+header .nav-collapse {
+	display:none;
+	position:absolute;
+	top:20px;
+	right:40px;
+	width:300px;
+	z-index:999;
+}
+
+header .nav-collapse ul li {
+	display:block;
+}
+
+
+header .nav-collapse input[type=checkbox] {
+    display: none;
+}
+header .nav-collapse input[type=checkbox]:checked ~ #menu-collapsed {
+    display: block;
+}
+
+header .nav-collapse #menu-collapsed {
+	display:none;
+	margin-top:58px;
+	background-color:$color-primary;
+	-webkit-box-shadow: 0 1px 2px 1px $color-secondary;
+	-moz-box-shadow: 0 1px 2px 1px $color-secondary;
+	box-shadow: 0 1px 2px 1px $color-secondary;
+}
+
+header .nav-collapse .menu-control {
+	position:absolute;
+	right:0px;
+	width:45px;
+	background-color:$color-primary;
+	color:#FFFFFF;
+	padding:8px 0px 5px 0px;
+	text-align:center;
+	border-radius:5px;
+	cursor:pointer;
+}
+header .nav-collapse .menu-control:after {
+	font-family: FontAwesome;
+	font-size: 19px;
+	content: "\f0c9";
+}
+
+header .nav-collapse .menu-control:hover {
+	background-color:$color-primary-hover;
+}
+
+header .nav-collapse .menu-control i {
+	font-size:23px;
+}
+
+header .nav-collapse ul {
+	display:block;
+}
+
+header .nav-collapse li a {
+	width:100%;
+	display:block;
+	padding:10px;
+	color:#FFFFFF;
+	text-decoration:none;
+	border-bottom:1px solid $color-primary-hover;
+	background-color:$color-primary;
+}
+header .nav-collapse li a:hover {
+	background-color:$color-primary-hover;
+}
+

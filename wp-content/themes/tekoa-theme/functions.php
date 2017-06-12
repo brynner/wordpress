@@ -26,3 +26,26 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/* Post Titles on Home */
+
+function homeTitle($string) {
+  $string = explode(':', $string);
+  if (!empty($string[2])) {
+    $title = $string[1].'<strong>'.$string[2].'</strong>';
+  } else {
+    $title = '<strong>'.$string[1].'</strong>';
+  }
+  echo $title;
+}
+
+function get_excerpt(){
+  $excerpt = get_the_content();
+  $excerpt = preg_replace(" ([.*?])",'',$excerpt);
+  $excerpt = strip_shortcodes($excerpt);
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, 127);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+  $excerpt = $excerpt.'...';
+  return $excerpt;
+}
